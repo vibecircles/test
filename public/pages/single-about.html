@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vibecircles">
+    <meta name="keywords" content="vibecircles">
+    <meta name="author" content="vibecircles">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <title>VibeCircles</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme css -->
+    <link id="change-link" rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- loader start -->
+    <div class="loading-text">
+        <div>
+            <h1 class="animate">Chill</h1>
+        </div>
+    </div>
+    <!-- loader end -->
+
+
+    <!-- header start -->
+    <div id="header-container"></div>
+    <script>
+       fetch('../../components/header.html')
+      .then(res => res.text())
+      .then(html => {
+          document.getElementById('header-container').innerHTML = html;
+          feather.replace(); // re-render Feather icons
+      });
+    </script> 
+    <!-- header end -->
+
+
+    <!-- page body start -->
+    <div class="page-body container-fluid custom-padding favourite-page-body">
+
+        <!-- sidebar panel start -->
+    <div id="sidebar-container"></div>
+
+    <script>
+        fetch('../../components/sidebar.html')
+          .then(res => res.text())
+          .then(html => {
+              document.getElementById('sidebar-container').innerHTML = html;
+              feather.replace(); // re-render Feather icons
+          });
+    </script>
+        <!-- sidebar panel end -->
+
+
+        <div class="page-center">
+
+            <!-- page cover start -->
+            <div class="page-cover">
+                <div class="cover-img">
+                    <img src="../assets/images/cover/3.jpg" class="img-fluid blur-up lazyload bg-img" alt="cover">
+                    <div class="cover-btns">
+                        <a href="#" class="btn btn-solid"><i class="iw-18 ih-18" data-feather="user-plus"></i>follow</a>
+                        <a href="#" class="btn btn-solid"><i class="iw-18 ih-18" data-feather="message-square"></i>send
+                            message</a>
+                    </div>
+                </div>
+                <div class="cover-content">
+                    <div class="page-logo">
+                        <a href="#">
+                            <img src="../assets/images/pages-logo/6.png" class="img-fluid blur-up lazyload bg-img"
+                                alt="">
+                        </a>
+
+                    </div>
+                    <a href="#" class="page-name">
+                        <h4>dance acadamy</h4>
+                        <h6>danceacadamy@gmail.com</h6>
+                    </a>
+                    <div class="page-stats">
+                        <ul>
+                            <li>
+                                <h2>56</h2>
+                                <h6>follow</h6>
+                            </li>
+                            <li>
+                                <h2>954</h2>
+                                <h6>follower</h6>
+                            </li>
+                            <li>
+                                <h2>968</h2>
+                                <h6>likes</h6>
+                            </li>
+                            <li>
+                                <h2>036</h2>
+                                <h6>post</h6>
+                            </li>
+                            <li>
+                                <h2><img src="../assets/images/flag.jpg" class="img-fluid blur-up lazyload" alt=""></h2>
+                                <h6>usa</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social-btn">
+                        <ul>
+                            <li class="facebook">
+                                <a href="#">
+                                    <svg>
+                                        <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                    </svg>
+                                    <h6>facebook</h6>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="#">
+                                    <svg>
+                                        <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                    </svg>
+                                    <h6>twitter</h6>
+                                </a>
+                            </li>
+                            <li class="whatsapp">
+                                <a href="#">
+                                    <svg>
+                                        <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                    </svg>
+                                    <h6>whatsapp</h6>
+                                </a>
+                            </li>
+                            <li class="instagram">
+                                <a href="#">
+                                    <svg>
+                                        <use xlink:href="../assets/svg/icons.svg#instagram"></use>
+                                    </svg>
+                                    <h6>instagram</h6>
+                                </a>
+                            </li>
+                            <li class="youtube">
+                                <a href="#">
+                                    <svg>
+                                        <use xlink:href="../assets/svg/icons.svg#youtube"></use>
+                                    </svg>
+                                    <h6>youtube</h6>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- page cover end -->
+
+            <!-- profile menu start -->
+            <div class="profile-menu section-t-space">
+                <ul>
+                    <li>
+                        <a href="single-page.html">
+                            <i class="iw-14 ih-14" data-feather="clock"></i>
+                            <h6>home</h6>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="single-about.html">
+                            <i class="iw-14 ih-14" data-feather="info"></i>
+                            <h6>about</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="single-reviews.html">
+                            <i class="iw-14 ih-14" data-feather="message-circle"></i>
+                            <h6>reviews</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="single-gallery.html">
+                            <i class="iw-14 ih-14" data-feather="image"></i>
+                            <h6>photos</h6>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="right-menu d-xl-flex d-none">
+                    <li>
+                        <div class="search-bar input-style icon-left search-inmenu">
+                            <i class="iw-16 ih-16 icon icon-theme" data-feather="search"></i>
+                            <input type="text" class="form-control" placeholder="search here...">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- profile menu end -->
+
+            <div class="container-fluid section-t-space px-0">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="sticky-top">
+                            <!-- profile box -->
+                            <div class="profile-about pages-about section-b-space">
+                                <div class="card-title">
+                                    <h3>about</h3>
+                                    <div class="settings">
+                                        <div class="setting-btn">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editProfile" onclick="handleModal(this)">
+                                                <i class="icon icon-dark stroke-width-3 iw-11 ih-11"
+                                                    data-feather="rotate-cw"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-content">
+                                    <ul>
+                                        <li>
+                                            <div class="details">
+                                                <h4>page info</h4>
+                                                <h6>created on 10 march 2018</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="details">
+                                                <h4>about us</h4>
+                                                <h6>We dance because there’s no greater feeling in the world than moving
+                                                    a piece of music and letting the rest of the world disappear.</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="details">
+                                                <h4>mission</h4>
+                                                <h6>" Practice like you’re in last. Perform like you’ve already won."
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="details">
+                                                <h4>Timings</h4>
+                                                <h6> 10 AM to 9 PM
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="details">
+                                                <h4>website</h4>
+                                                <h6><a href="www.friendbook.com">www.friendbook.com</a></h6>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <!-- hobbies profile -->
+                        <div class="about-profile section-b-space">
+                            <div class="card-title">
+                                <h3>hobbies & interest</h3>
+                                <div class="settings">
+                                    <div class="setting-btn">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#editProfile" onclick="handleModal(this)">
+                                            <i class="icon icon-dark stroke-width-3 iw-11 ih-11"
+                                                data-feather="edit-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="about-list">
+                                <li>
+                                    <h5 class="title">overview :</h5>
+                                    <h6 class="content">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia consequuntur
+                                        voluptate, autem asperiores facilis ea voluptatibus nisi deleniti repudiandae!
+                                        Ut autem facere eius sed quis quidem explicabo assumenda placeat voluptatem.
+                                    </h6>
+                                </li>
+                                <li>
+                                    <h5 class="title">Mission :</h5>
+                                    <h6 class="content">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia consequuntur
+                                        voluptate, autem asperiores facilis ea voluptatibus nisi deleniti repudiandae!
+                                        Ut autem facere eius sed quis quidem explicabo assumenda placeat voluptatem.
+                                    </h6>
+                                </li>
+                                <li>
+                                    <h5 class="title">Timings :</h5>
+                                    <h6 class="content">Mon to Sat: 8 to 10
+                                    </h6>
+                                </li>
+                                <li>
+                                    <h5 class="title">Service :</h5>
+                                    <h6 class="content">
+                                        learn all types of dance</h6>
+                                </li>
+                                <li>
+                                    <h5 class="title">Website :</h5>
+                                    <h6 class="content">danceacadamy.com</h6>
+                                </li>
+                                <li>
+                                    <h5 class="title">Started :</h5>
+                                    <h6 class="content">
+                                        june 20, 2010
+                                    </h6>
+                                </li>
+                                <li>
+                                    <h5 class="title">Email :</h5>
+                                    <h6 class="content">
+                                        billyerds@gmail.com
+                                    </h6>
+                                </li>
+                                <li>
+                                    <h5 class="title">Phone No :</h5>
+                                    <h6 class="content">
+                                        041 985 245 210
+                                    </h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- conversation panel start -->
+        <div id="conversation-container"></div>
+        <script>
+             fetch('../../components/conversation.html')
+            .then(res => res.text())
+            .then(html => {
+          document.getElementById('conversation-container').innerHTML = html;
+          feather.replace(); // activate Feather icons
+         });
+        </script>
+        <!-- conversation panel end -->
+
+    </div>
+    <!-- page body end -->
+
+
+
+
+
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- popper js-->
+    <script src="../assets/js/popper.min.js"></script>
+
+    <!-- slick slider js -->
+    <script src="../assets/js/slick.js"></script>
+    <script src="../assets/js/custom-slick.js"></script>
+
+    <!-- feather icon js-->
+    <script src="../assets/js/feather.min.js"></script>
+
+    <!-- emoji picker js-->
+    <script src="../assets/js/emojionearea.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.js"></script>
+
+    <!-- chatbox js -->
+    <script src="../assets/js/chatbox.js"></script>
+
+    <!-- lazyload js-->
+    <script src="../assets/js/lazysizes.min.js"></script>
+
+    <!-- theme setting js-->
+    <script src="../assets/js/theme-setting.js"></script>
+
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+
+    <!-- API Client -->
+    <script src="../assets/js/api.js"></script>
+
+    <!-- Single About -->
+    <script src="../assets/js/single-about.js"></script>
+
+    <script>
+        feather.replace();
+        $(" .emojiPicker").emojioneArea({
+            inline: true,
+            placement: 'absleft',
+            pickerPosition: " top left",
+        });
+    </script>
+
+</body>
+
+</html>

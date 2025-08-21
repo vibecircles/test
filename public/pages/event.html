@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vibecircles">
+    <meta name="keywords" content="vibecircles">
+    <meta name="author" content="vibecircles">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <title>VibeCircles</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme css -->
+    <link id="change-link" rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- loader start -->
+    <div class="loading-text">
+        <div>
+            <h1 class="animate">Chill</h1>
+        </div>
+    </div>
+    <!-- loader end -->
+
+
+    <!-- header start -->
+    <div id="header-container"></div>
+     <script>
+       fetch('../../components/header.html')
+      .then(res => res.text())
+      .then(html => {
+          document.getElementById('header-container').innerHTML = html;
+          feather.replace(); // re-render Feather icons
+      });
+    </script> 
+    <!-- header end -->
+
+    
+    <!-- page body start -->
+    <div class="page-body container-fluid custom-padding event-page">
+
+        <!-- sidebar panel start -->
+    <div id="sidebar-container"></div>
+    <script>
+        fetch('../../components/sidebar.html')
+          .then(res => res.text())
+          .then(html => {
+              document.getElementById('sidebar-container').innerHTML = html;
+              feather.replace(); // re-render Feather icons
+          });
+    </script>
+        <!-- sidebar panel end -->
+
+
+        <div class="page-center">
+
+            <!--  event cover start -->
+            <div class="event-cover">
+                <div class="event-img">
+                    <img src="../assets/images/cover/5.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                    <div class="event-content">
+                        <h1>latest events</h1>
+                    </div>
+                    <div class="cover-img-detail">
+                        <span>12 dec</span>
+                        <h3>last added 10 songs</h3>
+                        <a href="#">view more <i class="fas ms-1 fa-arrow-right"></i></a>
+                    </div>
+                    <div class="settings">
+                        <div class="setting-btn">
+                            <a href="#">
+                                <i class="icon icon-dark stroke-width-3 iw-11 ih-11" data-feather="rotate-cw"></i>
+                            </a>
+                        </div>
+                        <div class="setting-btn ms-2 setting-dropdown">
+                            <div class=" btn-group custom-dropdown arrow-none dropdown-sm">
+                                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="handleDropdown(this)">
+                                    <i class="icon-dark stroke-width-3 icon iw-11 ih-11" data-feather="sun"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                    data-feather="edit"></i>edit profile</a>
+                                        </li>
+                                        <li>
+                                            <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                    data-feather="user"></i>view profile</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-timeline">
+                    <div class="timeline-title">
+                        <div class="media">
+                            <img src="../assets/images/icon/event.png" class="img-fluid blur-up lazyload" alt="">
+                            <div class="media-body">
+                                <h4>timeline</h4>
+                                <h6>45 total your attended events</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="timeline-content">
+                        <li>
+                            <h4>2019</h4>
+                            <h6>12 events</h6>
+                        </li>
+                        <li>
+                            <h4>2018</h4>
+                            <h6>16 events</h6>
+                        </li>
+                        <li>
+                            <h4>2017</h4>
+                            <h6>10 events</h6>
+                        </li>
+                        <li>
+                            <h4>2016</h4>
+                            <h6>13 events</h6>
+                        </li>
+                        <li>
+                            <h4>2015</h4>
+                            <h6>5 events</h6>
+                        </li>
+                        <li>
+                            <h4>2014</h4>
+                            <h6>4 events</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--  event cover end -->
+
+
+            <!-- event detail start -->
+            <div class="row event-body">
+                <div class="col-xl-6">
+                    <div class="event-section">
+                        <div class="event_category no-arrow default-space">
+                            <div>
+                                <div class="event-box section-t-space ratio2_3">
+                                    <div class="image-section">
+                                        <img src="../assets/images/event/2.jpg"
+                                            class="img-fluid blur-up lazyload bg-img" alt="event">
+                                        <div class="card-title">
+                                            <h3>event</h3>
+                                            <div class="settings">
+                                                <div class="setting-btn">
+                                                    <a href="#" class="d-flex">
+                                                        <i class="icon icon-dark stroke-width-3 iw-11 ih-11"
+                                                            data-feather="rotate-cw"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="setting-btn ms-2 setting-dropdown">
+                                                    <div class=" btn-group custom-dropdown arrow-none dropdown-sm">
+                                                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false" onclick="handleDropdown(this)">
+                                                            <i class="icon-dark stroke-width-3 icon iw-11 ih-11"
+                                                                data-feather="sun"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                            data-feather="edit"></i>remind
+                                                                        me</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                            data-feather="settings"></i>setting</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="play-btn" data-bs-toggle="modal" data-bs-target="#videoPlayer">
+                                            <img src="../assets/images/icon/play.png" class="img-fluid blur-up lazyload"
+                                                alt="play">
+                                        </div>
+                                    </div>
+                                    <div class="event-content">
+                                        <h3>christmas 2021</h3>
+                                        <h6>26 january 2021</h6>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                            <span>15256 People Going</span></p>
+                                        <div class="bottom-part">
+                                            <a href="#" class="event-btn" onclick="handleAction(\'no\')" onclick="handleGenericClick(this)">going / not going</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="event-box section-t-space ratio2_3">
+                                    <div class="image-section">
+                                        <img src="../assets/images/event/1.jpg"
+                                            class="img-fluid blur-up lazyload bg-img" alt="event">
+                                        <div class="card-title">
+                                            <h3>event</h3>
+                                            <div class="settings">
+                                                <div class="setting-btn">
+                                                    <a href="#" class="d-flex">
+                                                        <i class="icon icon-dark stroke-width-3 iw-11 ih-11"
+                                                            data-feather="rotate-cw"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="setting-btn ms-2 setting-dropdown">
+                                                    <div class=" btn-group custom-dropdown arrow-none dropdown-sm">
+                                                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false" onclick="handleDropdown(this)">
+                                                            <i class="icon-dark stroke-width-3 icon iw-11 ih-11"
+                                                                data-feather="sun"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                            data-feather="edit"></i>remind
+                                                                        me</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                            data-feather="settings"></i>setting</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="play-btn" data-bs-toggle="modal" data-bs-target="#videoPlayer">
+                                            <img src="../assets/images/icon/play.png" class="img-fluid blur-up lazyload"
+                                                alt="play">
+                                        </div>
+                                    </div>
+                                    <div class="event-content">
+                                        <h3>christmas 2021</h3>
+                                        <h6>26 january 2021</h6>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                            <span>15256 People Going</span></p>
+                                        <div class="bottom-part">
+                                            <a href="#" class="event-btn" onclick="handleAction(\'no\')" onclick="handleGenericClick(this)">going / not going</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="event-box section-t-space ratio2_3">
+                                    <div class="image-section">
+                                        <img src="../assets/images/event/3.jpg"
+                                            class="img-fluid blur-up lazyload bg-img" alt="event">
+                                        <div class="card-title">
+                                            <h3>event</h3>
+                                            <div class="settings">
+                                                <div class="setting-btn">
+                                                    <a href="#" class="d-flex">
+                                                        <i class="icon icon-dark stroke-width-3 iw-11 ih-11"
+                                                            data-feather="rotate-cw"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="setting-btn ms-2 setting-dropdown">
+                                                    <div class=" btn-group custom-dropdown arrow-none dropdown-sm">
+                                                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false" onclick="handleDropdown(this)">
+                                                            <i class="icon-dark stroke-width-3 icon iw-11 ih-11"
+                                                                data-feather="sun"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                            data-feather="edit"></i>remind
+                                                                        me</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                            data-feather="settings"></i>setting</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="play-btn" data-bs-toggle="modal" data-bs-target="#videoPlayer">
+                                            <img src="../assets/images/icon/play.png" class="img-fluid blur-up lazyload"
+                                                alt="play">
+                                        </div>
+                                    </div>
+                                    <div class="event-content">
+                                        <h3>christmas 2021</h3>
+                                        <h6>26 january 2021</h6>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                            <span>15256 People Going</span></p>
+                                        <div class="bottom-part">
+                                            <a href="#" class="event-btn" onclick="handleAction(\'no\')" onclick="handleGenericClick(this)">going / not going</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- event category -->
+                    <div class="event-category section-t-space">
+                        <div class=" event-title">
+                            <div class="icon">
+                                <img src="../assets/images/icon/calender.png " class="img-fluid blur-up lazyload "
+                                    alt="calender ">
+                            </div>
+                            <div class="content">
+                                <h3>event category</h3>
+                                <h6>category</h6>
+                                <a href="#" onclick="handleGenericClick(this)">see more</a>
+                            </div>
+                        </div>
+                        <div class="col-10 suggestion-box">
+                            <div class="event-slider ratio_115 no-arrow default-space">
+                                <div>
+                                    <div class="story-box">
+                                        <div class="adaptive-overlay"></div>
+                                        <div class="story-bg">
+                                            
+                                        </div>
+                                        <div class="story-content">
+                                            <h6>josephin water</h6>
+                                            <span class="player"><i class="icon-light iw-10 ih-10"
+                                                    data-feather="user"></i>15k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="story-box">
+                                        <div class="adaptive-overlay"></div>
+                                        <div class="story-bg">
+                                            
+                                        </div>
+                                        <div class="story-content">
+                                            <h6>josephin water</h6>
+                                            <span class="player"><i class="icon-light iw-10 ih-10"
+                                                    data-feather="user"></i>30k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="story-box">
+                                        <div class="adaptive-overlay"></div>
+                                        <div class="story-bg">
+                                            
+                                        </div>
+                                        <div class="story-content">
+                                            <h6>josephin water</h6>
+                                            <span class="player"> <img src="../assets/images/icon/user-w.png"
+                                                    class="img-fluid blur-up lazyload" alt="">25k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="story-box">
+                                        <div class="adaptive-overlay"></div>
+                                        <div class="story-bg">
+                                            
+                                        </div>
+                                        <div class="story-content">
+                                            <h6>josephin water</h6>
+                                            <span class="player"> <img src="../assets/images/icon/user-w.png"
+                                                    class="img-fluid blur-up lazyload" alt="">25k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="calender-section custom-calender section-t-space  section-b-space">
+                        <div id='calendar'></div>
+                        <div class="event-bottom">
+                            <div class="event-content">
+                                <h3>tomorrow land event <span>14 december | <b>03:00am</b></span></h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry <span>6859
+                                        People Going</span></p>
+                                <h6>united kingdom</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- conversation panel start -->
+        <div id="conversation-container"></div>
+        <script>
+             fetch('../../components/conversation.html')
+            .then(res => res.text())
+            .then(html => {
+          document.getElementById('conversation-container').innerHTML = html;
+          feather.replace(); // activate Feather icons
+         });
+        </script>
+        <!-- conversation panel end -->
+
+    </div>
+    <!-- page body end -->
+
+
+    <!-- video player model start -->
+    <div class="modal fade bd-example-modal-lg" id="videoPlayer" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body video-model">
+                    <iframe class="video" src="https://www.youtube.com/embed/TKnufs85hXk"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- video player model end -->
+
+
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.6.0.min.js "></script>
+
+    <!-- popper js-->
+    <script src="../assets/js/popper.min.js "></script>
+
+    <!-- slick slider js -->
+    <script src="../assets/js/slick.js "></script>
+    <script src="../assets/js/custom-slick.js "></script>
+
+    <!-- feather icon js-->
+    <script src="../assets/js/feather.min.js "></script>
+
+    <!-- emoji picker js-->
+    <script src="../assets/js/emojionearea.min.js "></script>
+
+    <!-- fare calender -->
+    <script src="../assets/js/fare-calender/main.js "></script>
+    <script src="../assets/js/fare-calender/main_1.js "></script>
+    <script src="../assets/js/fare-calender/calender-data.js "></script>
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.js "></script>
+
+    <!-- chatbox js -->
+    <script src="../assets/js/chatbox.js "></script>
+
+    <!-- lazyload js-->
+    <script src="../assets/js/lazysizes.min.js"></script>
+
+    <!-- theme setting js-->
+    <script src="../assets/js/theme-setting.js"></script>
+
+    <!-- Theme js-->
+    <script src="../assets/js/script.js "></script>
+
+    <script>
+        feather.replace();
+        $(".emojiPicker ").emojioneArea({
+            inline: true,
+            placement: 'absleft',
+            pickerPosition: "top left ",
+        });
+    </script>
+
+</body>
+
+</html>

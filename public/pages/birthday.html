@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vibecircles">
+    <meta name="keywords" content="vibecircles">
+    <meta name="author" content="vibecircles">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <title>VibeCircles</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme css -->
+    <link id="change-link" rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+    <!-- API Integration -->
+    <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/birthday.js"></script>
+
+</head>
+
+<body>
+
+    <!-- loader start -->
+    <div class="loading-text">
+        <div>
+            <h1 class="animate">Chill</h1>
+        </div>
+    </div>
+    <!-- loader end -->
+
+    
+    <!-- header start -->
+    <div id="header-container"></div>
+     <script>
+       fetch('../../components/header.html')
+      .then(res => res.text())
+      .then(html => {
+          document.getElementById('header-container').innerHTML = html;
+          feather.replace(); // re-render Feather icons
+      });
+    </script> 
+    <!-- header end -->
+
+
+    <!-- page body start -->
+    <div class="page-body container-fluid custom-padding birthday-page">
+
+        <!-- sidebar panel start -->
+    <div id="sidebar-container"></div>
+
+    <script>
+        fetch('../../components/sidebar.html')
+          .then(res => res.text())
+          .then(html => {
+              document.getElementById('sidebar-container').innerHTML = html;
+              feather.replace(); // re-render Feather icons
+          });
+    </script>
+        <!-- sidebar panel end -->
+
+
+        <div class="page-center">
+
+
+            <!--  event cover start -->
+            <div class="event-cover light-cover">
+                <div class="event-img">
+                    <img src="../assets/images/cover/6.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                    <div class="event-content">
+                        <h1 class="celebration-txt">upcoming birthday</h1>
+                    </div>
+                    <div class="cover-img-detail">
+                        <span id="next-birthday-date">12 dec</span>
+                        <h3>Wish Birthday to your friend</h3>
+                    </div>
+                    <div class="settings">
+                        <div class="setting-btn">
+                            <a href="#">
+                                <i class="icon icon-dark stroke-width-3 iw-11 ih-11" data-feather="rotate-cw"></i>
+                            </a>
+                        </div>
+                        <div class="setting-btn ms-2 setting-dropdown">
+                            <div class=" btn-group custom-dropdown arrow-none dropdown-sm">
+                                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="handleDropdown(this)">
+                                    <i class="icon-dark stroke-width-3 icon iw-11 ih-11" data-feather="sun"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                    data-feather="edit"></i>edit profile</a>
+                                        </li>
+                                        <li>
+                                            <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                    data-feather="user"></i>view profile</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  event cover end -->
+
+            <div class="container-fluid section-t-space px-0">
+                <div class="page-content">
+                    <div class="content-center">
+                        <!-- friend list -->
+                        <div class="friend-list-box birthday-list section-b-space">
+                            <div class="card-title">
+                                <h3>Today</h3>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="friend-list friend-page-list">
+                                    <ul>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/1.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Paige Turner</h5>
+                                                        </a>
+                                                        <h6>24 Year Old</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/2.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Josephin water</h5>
+                                                        </a>
+                                                        <h6>26 year old</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/3.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Petey Cruiser</h5>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- friend list -->
+                        <div class="friend-list-box birthday-list section-b-space">
+                            <div class="card-title">
+                                <h3>tomorrow</h3>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="friend-list friend-page-list">
+                                    <ul>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/1.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Paige Turner</h5>
+                                                        </a>
+                                                        <h6>14 Dec, 1990</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/2.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Josephin water</h5>
+                                                        </a>
+                                                        <h6>14 Dec</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- friend list -->
+                        <div class="friend-list-box birthday-list section-b-space">
+                            <div class="card-title">
+                                <h3>Upcoming Birthdays</h3>
+                                <div class="card-title-right">
+                                    <button class="btn btn-sm btn-outline-primary refresh-birthdays" title="Refresh birthdays">
+                                        <i class="icon-refresh-cw"></i> Refresh
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="birthday-list" id="birthday-list-container">
+                                    <!-- Birthday list will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- User Birthday Info -->
+                        <div class="user-birthday-info section-b-space">
+                            <!-- User birthday info will be populated by JavaScript -->
+                        </div>
+                        
+                        <!-- Original friend list -->
+                        <div class="friend-list-box birthday-list section-b-space">
+                            <div class="card-title">
+                                <h3>January</h3>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="friend-list friend-page-list">
+                                    <ul>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/3.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Petey Cruiser</h5>
+                                                        </a>
+                                                        <h6>1 Jan, 1990</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/4.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Paige Turner</h5>
+                                                        </a>
+                                                        <h6>5 jan, 1985</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/5.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Josephin water</h5>
+                                                        </a>
+                                                        <h6>14 jan, 2000</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/6.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Petey Cruiser</h5>
+                                                        </a>
+                                                        <h6>15 jan, 1967</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/7.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Anna Sthesia</h5>
+                                                        </a>
+                                                        <h6>25 jan, 1989</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- friend list -->
+                        <div class="friend-list-box birthday-list section-b-space">
+                            <div class="card-title">
+                                <h3>february</h3>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="friend-list friend-page-list">
+                                    <ul>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/8.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Anna Mull</h5>
+                                                        </a>
+                                                        <h6>3 Feb, 1984</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/9.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Paul Molive</h5>
+                                                        </a>
+                                                        <h6>10 feb, 2001</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/10.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Paige Turner</h5>
+                                                        </a>
+                                                        <h6>16 feb, 1994</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/11.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Josephin water</h5>
+                                                        </a>
+                                                        <h6>17 feb, 1998</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/12.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Petey Cruiser</h5>
+                                                        </a>
+                                                        <h6>22 feb, 1985</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/13.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Paige Turner</h5>
+                                                        </a>
+                                                        <h6>23 feb</h6>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="friend-box">
+                                                <div class="media">
+                                                    <a href="profile(friend).html" class="user-img">
+                                                        <img src="../assets/images/user-sm/14.jpg"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                                        <span class="available-stats"></span>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile(friend).html">
+                                                            <h5 class="user-name">Josephin water</h5>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-outline" onclick="handleGenericClick(this)">create card</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-left d-none d-xl-block">
+                        <!-- profile box -->
+                        <div class="profile-box">
+                            <div class="profile-setting">
+                                <div class="setting-btn refresh">
+                                    <a href="#" class="d-flex">
+                                        <i class="icon icon-theme stroke-width-3 iw-11 ih-11"
+                                            data-feather="rotate-cw"></i>
+                                    </a>
+                                </div>
+                                <div class="setting-btn setting setting-dropdown">
+                                    <div class=" btn-group custom-dropdown arrow-none dropdown-sm">
+                                        <a href="#" class="d-flex" data-bs-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" onclick="handleDropdown(this)">
+                                            <i class="icon icon-theme stroke-width-3 iw-11 ih-11" data-feather="sun"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                            <ul>
+                                                <li>
+                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                            data-feather="edit"></i>edit profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                            data-feather="user"></i>view profile</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-content">
+                                                                            <a href="profile.html" class="image-section">
+                                    <div class="profile-img">
+                                        <div>
+                                            <img src="../assets/images/story/8.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="profile">
+                                        </div>
+                                        <span class="stats">
+                                            <img src="../assets/images/icon/verified.png"
+                                                class="img-fluid blur-up lazyload" alt="verified">
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="profile-detail">
+                                                                            <a href="profile.html">
+                                        <h2>kelin jasen <span>❤</span></h2>
+                                    </a>
+                                    <h5>kelin.jasen156@gmail.com</h5>
+                                    <div class="description">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="counter-stats">
+                                        <ul id="counter">
+                                            <li>
+                                                <h3 class="counter-value" data-count="546">0</h3>
+                                                <h5>following</h5>
+                                            </li>
+                                            <li>
+                                                <h3 class="counter-value" data-count="26335">0</h3>
+                                                <h5>likes</h5>
+                                            </li>
+                                            <li>
+                                                <h3 class="counter-value" data-count="6845">0</h3>
+                                                <h5>followers</h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="btn btn-solid" onclick="handleAction('view profile'); handleGenericClick(this)">view profile</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- suggestion box -->
+                        <div class="suggestion-box section-t-space">
+                            <div class="card-title">
+                                <h3>friend suggestion</h3>
+                                <div class="settings">
+                                    <div class="setting-btn">
+                                        <a href="#" class="d-flex">
+                                            <i class="icon icon-theme stroke-width-3 iw-11 ih-11"
+                                                data-feather="rotate-cw"></i>
+                                        </a>
+                                    </div>
+                                    <div class="setting-btn setting-dropdown ms-2">
+                                        <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+                                            <a href="#" class="d-flex" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" onclick="handleDropdown(this)">
+                                                <i class="icon icon-theme stroke-width-3 iw-11 ih-11"
+                                                    data-feather="sun"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                                <ul>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="user"></i>see all</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="search"></i>find friends</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="settings"></i>settings</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="suggestion-content ratio_115">
+                                <div class="slide-2 no-arrow default-space">
+                                    <div>
+                                        <div class="story-box">
+                                            <div class="adaptive-overlay pink-overlay"></div>
+                                            <div class="story-bg">
+                                                <img src="../assets/images/story/2.jpg" class="img-fluid bg-img"
+                                                    data-adaptive-background='1' alt="">
+                                            </div>
+                                            <div class="story-content">
+                                                <h6>josephin water</h6>
+                                                <span>active now</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="story-box">
+                                            <div class="adaptive-overlay blue-overlay"></div>
+                                            <div class="story-bg">
+                                                <img src="../assets/images/story/7.jpg" class="img-fluid bg-img"
+                                                    data-adaptive-background='1' alt="">
+                                            </div>
+                                            <div class="story-content">
+                                                <h6>josephin water</h6>
+                                                <span>active now</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="story-box">
+                                            <div class="adaptive-overlay skin-overlay"></div>
+                                            <div class="story-bg">
+                                                <img src="../assets/images/story/1.jpg" class="img-fluid bg-img"
+                                                    data-adaptive-background='1' alt="">
+                                            </div>
+                                            <div class="story-content">
+                                                <h6>josephin water</h6>
+                                                <span>active now</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- birthday reminder -->
+                        <div class="birthday-section section-t-space">
+                            <img src="../assets/images/birthday-bg.jpg" class="img-fluid blur-up lazyload bg-img"
+                                alt="birthday">
+                            <div class="birthday-top">
+                                <div class="title">
+                                    <h3>birthday !!!!</h3>
+                                    <h6>today your collge friend's birthday</h6>
+                                </div>
+                                <div class="setting">
+                                    <div class="setting-btn light-btn">
+                                        <a href="#" class="d-flex">
+                                            <i class="icon icon-light stroke-width-3 iw-11 ih-11"
+                                                data-feather="rotate-cw"></i>
+                                        </a>
+                                    </div>
+                                    <div class="setting-btn light-btn ms-2 setting-dropdown">
+                                        <div class=" btn-group custom-dropdown arrow-none dropdown-sm">
+                                            <a class="d-flex" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <i class="icon-light stroke-width-3 iw-12 ih-12" data-feather="sun"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                                <ul>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="edit"></i>edit profile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                                data-feather="user"></i>view profile</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="birthday-content">
+                                <div class="image-section">
+                                    <div class="icon">
+                                        <img src="../assets/images/icon/cake.png" class="img-fluid blur-up lazyload"
+                                            alt="cake">
+                                    </div>
+                                    <div class="center-profile">
+                                        <img src="../assets/images/user-sm/4.jpg"
+                                            class="img-fluid blur-up lazyload bg-img" alt="user">
+                                    </div>
+                                    <div class="icon">
+                                        <h5>20+</h5>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <h3>sufiya elija</h3>
+                                    <h6>glasgow, scotland</h6>
+                                    <p>Lorem 5th Sept 2019 dummy text of the printing and typesetting industry.</p>
+                                    <form>
+                                        <input type="text" placeholder="wish birthday to your friend"
+                                            class="form-control">
+                                        <button type="submit" aria-label="Send birthday wish">
+                                            <i class="icon-light icon stroke-width-3 iw-13 ih-13"
+                                                data-feather="arrow-right"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- conversation panel start -->
+        <div id="conversation-container"></div>
+        <script>
+             fetch('../../components/conversation.html')
+            .then(res => res.text())
+            .then(html => {
+          document.getElementById('conversation-container').innerHTML = html;
+          feather.replace(); // activate Feather icons
+         });
+        </script>
+        <!-- conversation panel end -->
+
+    </div>
+    <!-- page body end -->
+
+
+
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- popper js-->
+    <script src="../assets/js/popper.min.js"></script>
+
+    <!-- slick slider js -->
+    <script src="../assets/js/slick.js"></script>
+    <script src="../assets/js/custom-slick.js"></script>
+
+    <!-- counter js -->
+    <script src="../assets/js/counter.js"></script>
+
+    <!-- feather icon js-->
+    <script src="../assets/js/feather.min.js"></script>
+
+    <!-- emoji picker js-->
+    <script src="../assets/js/emojionearea.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.js"></script>
+
+    <!-- chatbox js -->
+    <script src="../assets/js/chatbox.js"></script>
+
+    <!-- lazyload js-->
+    <script src="../assets/js/lazysizes.min.js"></script>
+
+    <!-- theme setting js-->
+    <script src="../assets/js/theme-setting.js"></script>
+
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+
+    <script>
+        feather.replace();
+        $(".emojiPicker").emojioneArea({
+            inline: true,
+            placement: 'absleft',
+            pickerPosition: "top left",
+        });
+    </script>
+
+</body>
+
+</html>

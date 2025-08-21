@@ -1,0 +1,312 @@
+        <!-- conversation panel start -->
+        <div class="conversation-panel xl-light">
+            <div class="panel-header">
+                <h2>friends</h2>
+                <h5>start new conversation</h5>
+                <div class="setting">
+                    <div class="setting-btn setting-dropdown">
+                        <div class="btn-group custom-dropdown dropdown-sm">
+                            <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Options" onclick="handleDropdown(this)">
+                                <i class="icon-theme stroke-width-3 icon iw-11 ih-11" data-feather="sun"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                <ul>
+                                    <li>
+                                        <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="user"></i>see
+                                            all</a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="icon-font-light iw-16 ih-16" data-feather="search"></i>find
+                                            friends</a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                data-feather="settings"></i>settings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar">
+                <div class="lg-search">
+                    <i data-feather="search" class="icon-theme icon iw-16 ih-16"></i>
+                    <input type="text" class="form-control" placeholder="find friends...">
+                </div>
+                <div class="xs-search">
+                    <div class="icon-search">
+                        <i data-feather="search" class="icon-theme iw-16 ih-16"></i>
+                    </div>
+                    <div class="lg-search">
+                        <i data-feather="search" class="icon-theme icon iw-16 ih-16"></i>
+                        <input type="text" class="form-control" placeholder="find friends...">
+                        <div class="icon-close">
+                            <i data-feather="x" class="icon-theme iw-16 ih-16"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="friend-section">
+                <div class="header-section">
+                    <a data-bs-toggle="collapse" href="#accordion" role="button" aria-expanded="true" class="">
+                        close
+                        friends
+                        <div class="down-arrow">
+                            <i data-feather="chevron-down" class="icon-theme iw-14 ih-14"></i>
+                        </div>
+                    </a>
+                </div>
+                <div id="accordion" class="friend-list collapse show">
+                    <ul>
+                        <li class="friend-box user1">
+                            <div class="media">
+                                <div class="user-img">
+                                    <img src="../assets/images/user-sm/1.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                    <span class="available-stats"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="user-name">Paige Turner</h5>
+                                    <h6>alabma, USA</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="friend-box user2">
+                            <div class="media">
+                                <div class="user-img">
+                                    <img src="../assets/images/user-sm/2.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                    <span class="available-stats online"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="user-name">Bob Frapples</h5>
+                                    <h6>alabma, USA</h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="friend-section">
+                <div class="header-section">
+                    <a data-bs-toggle="collapse" href="#accordion1" role="button" aria-expanded="true" class="">
+                        recent
+                        chats
+                        <div class="down-arrow">
+                            <i data-feather="chevron-down" class="icon-theme iw-14 ih-14"></i>
+                        </div>
+                    </a>
+                </div>
+                <div id="accordion1" class="friend-list collapse show">
+                    <ul>
+                        <li class="friend-box user3">
+                            <div class="media">
+                                <div class="user-img">
+                                    <img src="../assets/images/user-sm/3.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                    <span class="available-stats"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="user-name">Josephin water</h5>
+                                    <h6>alabma, USA</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="friend-box user4">
+                            <div class="media">
+                                <div class="user-img">
+                                    <img src="../assets/images/user-sm/4.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                    <span class="available-stats offline"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="user-name">Petey Cruiser</h5>
+                                    <h6>alabma, USA</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="friend-box user5">
+                            <div class="media">
+                                <div class="user-img">
+                                    <img src="../assets/images/user-sm/5.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                    <span class="available-stats online"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="user-name">Anna Sthesia</h5>
+                                    <h6>alabma, USA</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="friend-box user6">
+                            <div class="media">
+                                <div class="user-img">
+                                    <img src="../assets/images/user-sm/6.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                    <span class="available-stats"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="user-name">Paul Molive</h5>
+                                    <h6>alabma, USA</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="friend-box user7">
+                            <div class="media">
+                                <div class="user-img">
+                                    <img src="../assets/images/user-sm/7.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                    <span class="available-stats away"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="user-name">Anna Mull</h5>
+                                    <h6>alabma, USA</h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!-- conversation panel end -->
+    <script>
+        // Hash link functionality handlers
+        function handleAction(action) {
+            console.log('Action triggered:', action);
+            // Add your action handling logic here
+            switch(action.toLowerCase()) {
+                case 'like':
+                    handleLike();
+                    break;
+                case 'reply':
+                    handleReply();
+                    break;
+                case 'translate':
+                    handleTranslate();
+                    break;
+                case 'follow':
+                    handleFollow();
+                    break;
+                case 'send':
+                    handleSend();
+                    break;
+                case 'view profile':
+                    handleViewProfile();
+                    break;
+                case 'yes':
+                    handleConfirm();
+                    break;
+                case 'no':
+                    handleCancel();
+                    break;
+                case 'confirm':
+                    handleConfirm();
+                    break;
+                case 'delete':
+                    handleDelete();
+                    break;
+                case 'close':
+                    handleClose();
+                    break;
+                default:
+                    console.log('Unknown action:', action);
+            }
+        }
+        
+        function handleSocialMedia(platform) {
+            console.log('Social media clicked:', platform);
+            // Add social media handling logic
+        }
+        
+        function handleUserClick(element) {
+            console.log('User clicked:', element);
+            // Add user interaction logic
+        }
+        
+        function handleDropdown(element) {
+            console.log('Dropdown triggered:', element);
+            // Bootstrap dropdown is handled automatically
+        }
+        
+        function handleModal(element) {
+            console.log('Modal triggered:', element);
+            // Bootstrap modal is handled automatically
+        }
+        
+        function handleTab(element) {
+            console.log('Tab triggered:', element);
+            // Bootstrap tab is handled automatically
+        }
+        
+        function handleCollapse(element) {
+            console.log('Collapse triggered:', element);
+            // Bootstrap collapse is handled automatically
+        }
+        
+        function handlePlay(element) {
+            console.log('Play triggered:', element);
+            // Add video/audio play logic
+        }
+        
+        function handleVolume(element) {
+            console.log('Volume triggered:', element);
+            // Add volume control logic
+        }
+        
+        function handleGenericClick(element) {
+            console.log('Generic click:', element);
+            // Add generic click handling
+        }
+        
+        // Specific action handlers
+        function handleLike() {
+            console.log('Like functionality');
+            // Add like logic
+        }
+        
+        function handleReply() {
+            console.log('Reply functionality');
+            // Add reply logic
+        }
+        
+        function handleTranslate() {
+            console.log('Translate functionality');
+            // Add translate logic
+        }
+        
+        function handleFollow() {
+            console.log('Follow functionality');
+            // Add follow logic
+        }
+        
+        function handleSend() {
+            console.log('Send functionality');
+            // Add send logic
+        }
+        
+        function handleViewProfile() {
+            console.log('View profile functionality');
+            // Add view profile logic
+        }
+        
+        function handleConfirm() {
+            console.log('Confirm functionality');
+            // Add confirm logic
+        }
+        
+        function handleCancel() {
+            console.log('Cancel functionality');
+            // Add cancel logic
+        }
+        
+        function handleDelete() {
+            console.log('Delete functionality');
+            // Add delete logic
+        }
+        
+        function handleClose() {
+            console.log('Close functionality');
+            // Add close logic
+        }
+    </script>

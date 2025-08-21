@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vibecircles">
+    <meta name="keywords" content="vibecircles">
+    <meta name="author" content="vibecircles">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <title>VibeCircles</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme css -->
+    <link id="change-link" rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- loader start -->
+    <div class="loading-text">
+        <div>
+            <h1 class="animate">Chill</h1>
+        </div>
+    </div>
+    <!-- loader end -->
+
+
+    <!-- login section start -->
+    <section class="login-section">
+        <div class="header-section">
+            <div class="logo-sec">
+                <a href="index.html">
+                    <img src="assets/images/icon/logo.png" alt="logo" class="img-fluid blur-up lazyload">
+                </a>
+            </div>
+            <div class="right-links">
+                <ul>
+                    <li>
+                        <a href="#" onclick="handleGenericClick(this)">
+                            about
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="handleGenericClick(this)">
+                            Faq
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-5 d-none d-lg-block">
+                    <div class="login-welcome">
+                        <div>
+                            <img src="assets/images/login/charcter.png" class="img-fluid blur-up lazyload"
+                                alt="charcter">
+                            <h1>Welcome Back!</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7 col-md-10 col-12 m-auto">
+                    <div class="login-form">
+                        <div>
+                            <div class="login-title">
+                                <h2>Login</h2>
+                            </div>
+                            <div class="login-discription">
+                                <h3>Hey! There, Welcome Back</h3>
+                                <h4>Welcome to VibeCircles, please login to your account.
+                                </h4>
+                            </div>
+                            <div class="form-sec">
+                                <div>
+                                    <form class="theme-form">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                placeholder="Enter email">
+                                            <i class="input-icon iw-20 ih-20" data-feather="user"></i>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Password">
+                                            <i class="input-icon iw-20 ih-20" data-feather="eye"></i>
+                                            <!-- <i class="input-icon" data-feather="eye-off" width="20" height="20"></i> -->
+                                        </div>
+                                        <div class="bottom-sec">
+                                            <div class="form-check checkbox_animated">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">remember me</label>
+                                            </div>
+                                            <a href="#" class="ms-auto forget-password" onclick="handleGenericClick(this)">forget
+                                                password?</a>
+                                        </div>
+                                        <div class="btn-section">
+                                            <a href="#" class="btn btn-solid btn-lg" onclick="handleGenericClick(this)">login</a>
+                                            <a href="register.html" class="btn btn-solid btn-lg ms-auto">sign up</a>
+                                        </div>
+                                    </form>
+                                    <div class="connect-with">
+                                        <h6><span>OR Connect With</span></h6>
+                                        <ul class="social-links">
+                                            <li class="google">
+                                                <a href="#">
+                                                    <svg class="">
+                                                        <use xlink:href="assets/svg/icons.svg#google"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="facebook">
+                                                <a href="#">
+                                                    <svg class="">
+                                                        <use xlink:href="assets/svg/icons.svg#facebook"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="twitter">
+                                                <a href="#">
+                                                    <svg class="">
+                                                        <use xlink:href="assets/svg/icons.svg#twitter"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- login section end -->
+
+
+    <!-- latest jquery-->
+    <script src="./assets/js/jquery-3.6.0.min.js "></script>
+
+    <!-- popper js-->
+    <script src="./assets/js/popper.min.js "></script>
+
+    <!-- slick slider js -->
+    <script src="./assets/js/slick.js "></script>
+    <script src="./assets/js/custom-slick.js "></script>
+
+    <!-- feather icon js-->
+    <script src="./assets/js/feather.min.js "></script>
+
+    <!-- emoji picker js-->
+    <script src="./assets/js/emojionearea.min.js "></script>
+
+    <!-- Bootstrap js-->
+    <script src="./assets/js/bootstrap.js "></script>
+
+    <!-- chatbox js -->
+    <script src="./assets/js/chatbox.js "></script>
+
+    <!-- lazyload js-->
+    <script src="./assets/js/lazysizes.min.js"></script>
+
+    <!-- Theme js-->
+    <script src="./assets/js/script.js "></script>
+
+    <script>
+        feather.replace();
+        $(".emojiPicker ").emojioneArea({
+            inline: true,
+            placement: 'absleft',
+            pickerPosition: "top left ",
+        });
+    </script>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>

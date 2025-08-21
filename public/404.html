@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Font Awesome CDN (for social icons like Facebook, TikTok, etc.) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vibecircles">
+    <meta name="keywords" content="vibecircles">
+    <meta name="author" content="vibecircles">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <title>VibeCircles</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme css -->
+    <link id="change-link" rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body class="bg-white">
+
+
+    <!-- loader start -->
+    <div class="loading-text">
+        <div>
+            <h1 class="animate">Chill</h1>
+        </div>
+    </div>
+    <!-- loader end -->
+
+
+
+    <!-- header start -->
+    <div id="header-container"></div>
+     <script>
+       fetch('../../components/header.html')
+      .then(res => res.text())
+      .then(html => {
+          document.getElementById('header-container').innerHTML = html;
+          feather.replace(); // re-render Feather icons
+      });
+    </script> 
+
+    <!-- header end -->
+
+
+    <!-- breadcrumb section start -->
+    <section class="breadcrumb-section breadcrumb-sm">
+        <img src="./assets/images/breadcrumb.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+        <div class="animation-emoji">
+            <ul class="circles">
+                <li>
+                    <img src="./assets/images/breadcrumb/1.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+                <li>
+                    <img src="./assets/images/breadcrumb/2.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+                <li>
+                    <img src="./assets/images/breadcrumb/3.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+                <li>
+                    <img src="./assets/images/breadcrumb/4.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+                <li>
+                    <img src="./assets/images/breadcrumb/5.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+                <li>
+                    <img src="./assets/images/breadcrumb/6.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+                <li>
+                    <img src="./assets/images/breadcrumb/7.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+                <li>
+                    <img src="./assets/images/breadcrumb/8.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+                <li>
+                    <img src="./assets/images/breadcrumb/9.png" class="img-fluid blur-up lazyload" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="help-search">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-12 m-auto">
+                        <h2>404</h2>
+                        <nav aria-label="breadcrumb ">
+                            <ol class="breadcrumb theme-breadcrumb">
+                                <li class="breadcrumb-item"><a href="#" onclick="handleGenericClick(this)">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">404</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb section end -->
+
+
+    <!-- section start -->
+    <section class="error-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <div class="error-img">
+                        <img src="assets/images/404/1.png" class="img-fluid blur-up lazyload first-img" alt="">
+                        <img src="assets/images/404/2.png" class="img-fluid blur-up lazyload second-img" alt="">
+                        <img src="assets/images/404/3.png" class="img-fluid blur-up lazyload third-img" alt="">
+                    </div>
+                    <div class="error-content">
+                        <p>the page you requested could not be found</p>
+                        <a href="index.html" class="btn btn-solid btn-lg">back to home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+
+
+    <!-- footer start -->
+    <footer class="footer-pt-space pb-0 footer-theme overflow-hidden">
+        <div class="container">
+            <div class="row footer-sec footer-pb-space">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-title d-md-none d-block">
+                        <h4>about</h4>
+                    </div>
+                    <div class="footer-content">
+                        <div class="footer-logo"><img src="assets/images/icon/Untitled (8).png" alt=""></div>
+                        <p>VibeCircles is a social platform built for friends and good vibes. 
+                            No ads, no drama — just real people sharing real moments. 
+                            Stay connected and follow our journey as we launch soon!</p>
+                        <div class="footer-social">
+                            <ul class="d-flex">
+                                <li><a href="https://www.facebook.com/profile.php?id=61577760104699"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/vibecircles/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.threads.com/@vibecircles"><i class="fab fa-threads"></i></a></li>
+                                <li><a href="https://x.com/vibecircles"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.tiktok.com/@vibecircles"><i class="fab fa-tiktok"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-title">
+                        <br><br>
+                        <h4>company</h4>
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="pages/about-us.html">about us</a></li>
+                            <li><a href="pages/contact-us.html">contact us</a></li>
+                            <li><a href="#" onclick="handleGenericClick(this)">blog</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-title">
+                        <br><br>
+                        <h4>quick links</h4>
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="pages/help-support.html">help & support</a></li>
+                            <li><a href="#" onclick="handleGenericClick(this)">register</a></li>
+                            <li><a href="pages/faq.html">faq</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="sub-footer">
+                        <p>VibeCircles © 2025. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="animation-home">
+            <div class="cross"></div>
+            <div class="cross cross1"></div>
+            <div class="tringle tringle1"></div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- latest jquery-->
+    <script src="assets/js/jquery-3.6.0.min.js "></script>
+
+    <!-- popper js-->
+    <script src="assets/js/popper.min.js "></script>
+
+    <!-- slick slider js -->
+    <script src="assets/js/slick.js "></script>
+    <script src="assets/js/custom-slick.js "></script>
+
+    <!-- feather icon js-->
+    <script src="assets/js/feather.min.js "></script>
+
+    <!-- Bootstrap js-->
+    <script src="./assets/js/bootstrap.js "></script>
+
+    <!-- lazyload js-->
+    <script src="./assets/js/lazysizes.min.js"></script>
+
+    <!-- theme setting js-->
+    <script src="./assets/js/theme-setting.js"></script>
+
+    <!-- Theme js-->
+    <script src="./assets/js/script.js "></script>
+
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+
+</html>

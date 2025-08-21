@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vibecircles">
+    <meta name="keywords" content="vibecircles">
+    <meta name="author" content="vibecircles">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <title>VibeCircles</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme css -->
+    <link id="change-link" rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- loader start -->
+    <div class="loading-text">
+        <div>
+            <h1 class="animate">Chill</h1>
+        </div>
+    </div>
+    <!-- loader end -->>
+
+
+    <!-- header start -->
+    <div id="header-container"></div>
+     <script>
+       fetch('../../components/header.html')
+      .then(res => res.text())
+      .then(html => {
+          document.getElementById('header-container').innerHTML = html;
+          feather.replace(); // re-render Feather icons
+      });
+    </script> 
+    <!-- header end -->
+
+    
+    <!-- page body start -->
+    <div class="page-body container-fluid custom-padding event-page">
+
+    <!-- sidebar panel start -->
+    <div id="sidebar-container"></div>
+
+    <script>
+        fetch('../../components/sidebar.html')
+          .then(res => res.text())
+          .then(html => {
+              document.getElementById('sidebar-container').innerHTML = html;
+              feather.replace(); // re-render Feather icons
+          });
+    </script>
+    <!-- sidebar panel end -->>
+
+
+        <div class="page-center">
+
+            <!--  event cover start -->
+            <div class="event-cover light-cover">
+                <div class="event-img">
+                    <img src="../assets/images/cover/8.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                    <div class="event-content">
+                        <h1>list of pages</h1>
+                    </div>
+                    <div class="cover-img-detail">
+                        <span>12 dec</span>
+                    </div>
+                    <div class="settings">
+                        <div class="setting-btn">
+                            <a href="#">
+                                <i class="icon icon-dark stroke-width-3 iw-11 ih-11" data-feather="rotate-cw"></i>
+                            </a>
+                        </div>
+                        <div class="setting-btn ms-2 setting-dropdown">
+                            <div class=" btn-group custom-dropdown arrow-none dropdown-sm">
+                                <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="handleDropdown(this)">
+                                    <i class="icon-dark stroke-width-3 icon iw-11 ih-11" data-feather="sun"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right custom-dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                    data-feather="edit"></i>edit profile</a>
+                                        </li>
+                                        <li>
+                                            <a href=""><i class="icon-font-light iw-16 ih-16"
+                                                    data-feather="user"></i>view profile</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  event cover end -->
+
+
+
+            <div class="container-fluid section-t-space px-0">
+                <div class="page-content">
+
+                    <div class="content-center w-100">
+                        <!-- profile menu start -->
+                        <div class="profile-menu ms-0 me-0">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h6>top suggestions</h6>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h6>invitation</h6>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <h6>followed pages</h6>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h6>your pages</h6>
+                                    </a>
+                                </li>
+                                <li class="d-xl-none d-inline-block">
+                                    <a href="">
+                                        <h6>create page</h6>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="right-menu d-xl-flex d-none">
+                                <li>
+                                    <a href="#">
+                                        <h6>create page</h6>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- profile menu end -->
+                        <!-- page list -->
+                        <div class="page-list-section section-t-space">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="list-box create-page">
+                                        <div>
+                                            <i class="iw-30 ih-30" data-feather="plus-circle"></i>
+                                            <h5 class="card-title">create page</h5>
+                                            <p>create page to reach more people</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="list-box">
+                                        <div class="cover-img">
+                                            <img src="../assets/images/cover/9.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="">
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="../assets/images/pages-logo/6.png"
+                                                        class="img-fluid blur-up lazyload bg-img" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-content">
+                                            <div class="page-name">
+                                                <a href="#">
+                                                    <h4>dance acadamy</h4>
+                                                </a>
+                                                <h6>danceacadamy@gmail.com</h6>
+                                            </div>
+                                            <div class="counter-stats">
+                                                <ul>
+                                                    <li>
+                                                        <h3 class="counter-value">546</h3>
+                                                        <h5>following</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">26335</h3>
+                                                        <h5>likes</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">6845</h3>
+                                                        <h5>followers</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom-btn">
+                                                <a href="#" class="btn btn-solid" onclick="handleAction(\'follow\')" onclick="handleGenericClick(this)">followed</a>
+                                                <a href="#" class="btn btn-solid" onclick="handleGenericClick(this)">invite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="list-box">
+                                        <div class="cover-img">
+                                            <img src="../assets/images/cover/10.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="">
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="../assets/images/pages-logo/6.png"
+                                                        class="img-fluid blur-up lazyload bg-img" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-content">
+                                            <div class="page-name">
+                                                <a href="#">
+                                                    <h4>dance acadamy</h4>
+                                                </a>
+                                                <h6>danceacadamy@gmail.com</h6>
+                                            </div>
+                                            <div class="counter-stats">
+                                                <ul>
+                                                    <li>
+                                                        <h3 class="counter-value">546</h3>
+                                                        <h5>following</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">26335</h3>
+                                                        <h5>likes</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">6845</h3>
+                                                        <h5>followers</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom-btn">
+                                                <a href="#" class="btn btn-solid" onclick="handleAction(\'follow\')" onclick="handleGenericClick(this)">followed</a>
+                                                <a href="#" class="btn btn-solid" onclick="handleGenericClick(this)">invite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="list-box">
+                                        <div class="cover-img">
+                                            <img src="../assets/images/cover/11.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="">
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="../assets/images/pages-logo/6.png"
+                                                        class="img-fluid blur-up lazyload bg-img" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-content">
+                                            <div class="page-name">
+                                                <a href="#">
+                                                    <h4>dance acadamy</h4>
+                                                </a>
+                                                <h6>danceacadamy@gmail.com</h6>
+                                            </div>
+                                            <div class="counter-stats">
+                                                <ul>
+                                                    <li>
+                                                        <h3 class="counter-value">546</h3>
+                                                        <h5>following</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">26335</h3>
+                                                        <h5>likes</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">6845</h3>
+                                                        <h5>followers</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom-btn">
+                                                <a href="#" class="btn btn-solid" onclick="handleAction(\'follow\')" onclick="handleGenericClick(this)">followed</a>
+                                                <a href="#" class="btn btn-solid" onclick="handleGenericClick(this)">invite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="list-box">
+                                        <div class="cover-img">
+                                            <img src="../assets/images/cover/12.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="">
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="../assets/images/pages-logo/6.png"
+                                                        class="img-fluid blur-up lazyload bg-img" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-content">
+                                            <div class="page-name">
+                                                <a href="#">
+                                                    <h4>dance acadamy</h4>
+                                                </a>
+                                                <h6>danceacadamy@gmail.com</h6>
+                                            </div>
+                                            <div class="counter-stats">
+                                                <ul>
+                                                    <li>
+                                                        <h3 class="counter-value">546</h3>
+                                                        <h5>following</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">26335</h3>
+                                                        <h5>likes</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">6845</h3>
+                                                        <h5>followers</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom-btn">
+                                                <a href="#" class="btn btn-solid" onclick="handleAction(\'follow\')" onclick="handleGenericClick(this)">followed</a>
+                                                <a href="#" class="btn btn-solid" onclick="handleGenericClick(this)">invite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="list-box">
+                                        <div class="cover-img">
+                                            <img src="../assets/images/cover/13.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="">
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="../assets/images/pages-logo/6.png"
+                                                        class="img-fluid blur-up lazyload bg-img" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-content">
+                                            <div class="page-name">
+                                                <a href="#">
+                                                    <h4>dance acadamy</h4>
+                                                </a>
+                                                <h6>danceacadamy@gmail.com</h6>
+                                            </div>
+                                            <div class="counter-stats">
+                                                <ul>
+                                                    <li>
+                                                        <h3 class="counter-value">546</h3>
+                                                        <h5>following</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">26335</h3>
+                                                        <h5>likes</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">6845</h3>
+                                                        <h5>followers</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom-btn">
+                                                <a href="#" class="btn btn-solid" onclick="handleAction(\'follow\')" onclick="handleGenericClick(this)">followed</a>
+                                                <a href="#" class="btn btn-solid" onclick="handleGenericClick(this)">invite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="list-box">
+                                        <div class="cover-img">
+                                            <img src="../assets/images/cover/14.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="">
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="../assets/images/pages-logo/6.png"
+                                                        class="img-fluid blur-up lazyload bg-img" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-content">
+                                            <div class="page-name">
+                                                <a href="#">
+                                                    <h4>dance acadamy</h4>
+                                                </a>
+                                                <h6>danceacadamy@gmail.com</h6>
+                                            </div>
+                                            <div class="counter-stats">
+                                                <ul>
+                                                    <li>
+                                                        <h3 class="counter-value">546</h3>
+                                                        <h5>following</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">26335</h3>
+                                                        <h5>likes</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">6845</h3>
+                                                        <h5>followers</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom-btn">
+                                                <a href="#" class="btn btn-solid" onclick="handleAction(\'follow\')" onclick="handleGenericClick(this)">followed</a>
+                                                <a href="#" class="btn btn-solid" onclick="handleGenericClick(this)">invite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="list-box">
+                                        <div class="cover-img">
+                                            <img src="../assets/images/cover/15.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="">
+                                            <div class="logo-img">
+                                                <a href="#">
+                                                    <img src="../assets/images/pages-logo/6.png"
+                                                        class="img-fluid blur-up lazyload bg-img" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-content">
+                                            <div class="page-name">
+                                                <a href="#">
+                                                    <h4>dance acadamy</h4>
+                                                </a>
+                                                <h6>danceacadamy@gmail.com</h6>
+                                            </div>
+                                            <div class="counter-stats">
+                                                <ul>
+                                                    <li>
+                                                        <h3 class="counter-value">546</h3>
+                                                        <h5>following</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">26335</h3>
+                                                        <h5>likes</h5>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="counter-value">6845</h3>
+                                                        <h5>followers</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom-btn">
+                                                <a href="#" class="btn btn-solid" onclick="handleAction(\'follow\')" onclick="handleGenericClick(this)">followed</a>
+                                                <a href="#" class="btn btn-solid" onclick="handleGenericClick(this)">invite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    <!-- conversation panel start -->
+        <div id="conversation-container"></div>
+        <script>
+             fetch('../../components/conversation.html')
+            .then(res => res.text())
+            .then(html => {
+            document.getElementById('conversation-container').innerHTML = html;
+            feather.replace(); // activate Feather icons
+         });
+        </script>
+    <!-- conversation panel end -->
+
+    </div>
+    <!-- page body end -->
+
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- popper js-->
+    <script src="../assets/js/popper.min.js"></script>
+
+    <!-- slick slider js -->
+    <script src="../assets/js/slick.js"></script>
+    <script src="../assets/js/custom-slick.js"></script>
+
+    <!-- feather icon js-->
+    <script src="../assets/js/feather.min.js"></script>
+
+    <!-- emoji picker js-->
+    <script src="../assets/js/emojionearea.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.js"></script>
+
+    <!-- chatbox js -->
+    <script src="../assets/js/chatbox.js"></script>
+
+    <!-- lazyload js-->
+    <script src="../assets/js/lazysizes.min.js"></script>
+
+    <!-- theme setting js-->
+    <script src="../assets/js/theme-setting.js"></script>
+
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+
+    <!-- API Client -->
+    <script src="../assets/js/api.js"></script>
+
+    <!-- Page List -->
+    <script src="../assets/js/page-list.js"></script>
+
+    <script>
+        feather.replace();
+        $(".emojiPicker").emojioneArea({
+            inline: true,
+            placement: 'absleft',
+            pickerPosition: "top left",
+        });
+    </script>
+
+</body>
+
+</html>

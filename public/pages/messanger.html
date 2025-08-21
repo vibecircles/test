@@ -1,0 +1,2609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vibecircles">
+    <meta name="keywords" content="vibecircles">
+    <meta name="author" content="vibecircles">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <title>VibeCircles</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
+
+    <!-- Theme css -->
+    <link id="change-link" rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+    <!-- API Integration -->
+    <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/messenger.js"></script>
+
+</head>
+
+<body>
+
+    <!-- loader start -->
+    <div class="loading-text">
+        <div>
+            <h1 class="animate">Chill</h1>
+        </div>
+    </div>
+    <!-- loader end -->
+
+
+    <!-- header start -->
+    <div id="header-container"></div>
+     <script>
+       fetch('../../components/header.html')
+      .then(res => res.text())
+      .then(html => {
+          document.getElementById('header-container').innerHTML = html;
+          feather.replace(); // re-render Feather icons
+      });
+    </script> 
+
+    <!-- header end -->
+
+
+    <!-- messanger section start -->
+    <section class="messanger-section">
+        <div class="chat-users">
+            <div class="user-header">
+                <a href="../../index.html" class="back-btn d-block d-sm-none">
+                    <i class="ih-18 iw-18" data-feather="arrow-left"></i>
+                </a>
+                <div class="search-bar">
+                    <i data-feather="search" class="icon-theme icon iw-16"></i>
+                    <input type="text" class="form-control" placeholder="find friends...">
+                </div>
+                <a class="new-chat" href="#"><i class="icon-light iw-14 ih-14" data-feather="edit"></i></a>
+            </div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user1" role="tab" aria-controls="user1"
+                        aria-selected="true">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/2.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Paul Molive <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user2" role="tab" aria-controls="user2"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/3.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Anna Sthesia <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <div class="chat">
+                            <h6>i have arranged the meeting at 2.30 </h6>
+                            <span class="count">4</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#user3" role="tab" aria-controls="user3"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/1.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Petey Cruiser <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>i m waiting for your reply.</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user4" role="tab" aria-controls="user4"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/4.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Anna Mull <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>sure you did!</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user5" role="tab" aria-controls="user5"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/5.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Paige Turner <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user6" role="tab" aria-controls="user6"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/6.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Bob Frapples <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user7" role="tab" aria-controls="user7"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/7.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Paul Molive <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user8" role="tab" aria-controls="user8"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/8.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Paul Molive <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user9" role="tab" aria-controls="user9"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/9.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Paul Molive <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user10" role="tab" aria-controls="user10"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/10.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Paul Molive <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user11" role="tab" aria-controls="user11"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/11.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Paul Molive <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#user12" role="tab" aria-controls="user12"
+                        aria-selected="false">
+                        <div class="media list-media">
+                            <div class="story-img">
+                                <div class="user-img">
+                                    <img src="../assets/images/user/12.jpg" class="img-fluid blur-up lazyload bg-img"
+                                        alt="user">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h5>Paul Molive <span>2.40 PM</span></h5>
+                                <h6>online</h6>
+                            </div>
+                        </div>
+                        <h6>How are you ?</h6>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="chat-content">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade" id="user1" role="tabpanel" aria-labelledby="user1">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/2.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Paul Molive </h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Paul Molive </h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user2" role="tabpanel" aria-labelledby="user2">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/3.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Anna Sthesia </h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Anna Sthesia</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show active" id="user3" role="tabpanel" aria-labelledby="user3">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/1.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Petey Cruiser</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Petey Cruiser</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user4" role="tabpanel" aria-labelledby="user4">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/4.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Anna Mull </h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/4.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Anna Mull</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user5" role="tabpanel" aria-labelledby="user5">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/5.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Bob Frapples</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/5.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Bob Frapples </h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user6" role="tabpanel" aria-labelledby="user6">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/6.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Petey Cruiser</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/6.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Petey Cruiser</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user7" role="tabpanel" aria-labelledby="user7">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/7.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Petey Cruiser</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/7.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Petey Cruiser</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user8" role="tabpanel" aria-labelledby="user8">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/8.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Petey Cruiser</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/8.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Petey Cruiser</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user9" role="tabpanel" aria-labelledby="user9">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/9.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Petey Cruiser</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/9.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Petey Cruiser</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user10" role="tabpanel" aria-labelledby="user10">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/10.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Petey Cruiser</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/10.jpg" class="img-fluid blur-up lazyload bg-img"
+                                    alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Petey Cruiser</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user11" role="tabpanel" aria-labelledby="user11">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/11.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Petey Cruiser</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/11.jpg" class="img-fluid blur-up lazyload bg-img"
+                                    alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Petey Cruiser</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="user12" role="tabpanel" aria-labelledby="user12">
+                    <div class="tab-box">
+                        <div class="user-chat">
+                            <div class="user-title">
+                                <div class="back-btn d-block d-sm-none">
+                                    <i data-feather="arrow-left"></i>
+                                </div>
+                                <div class="media list-media">
+                                    <div class="story-img">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user/12.jpg"
+                                                class="img-fluid blur-up lazyload bg-img" alt="user">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Petey Cruiser</h5>
+                                        <h6>active 10m ago</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-option">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i data-feather="phone" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="video" class="icon-dark"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings" class="icon-dark"></i></a>
+                                        </li>
+                                        <li class="d-block d-lg-none info-user">
+                                            <a href="#"><i data-feather="info" class="icon-dark"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <div class="avenue-messenger">
+                                    <div class="chat">
+                                        <div class="messages-content">
+                                            <div class="message new">
+                                                Well, I thought the main character’s situation was interesting, but his
+                                                attitude toward women bothered me.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I can see that. It definitely seemed like he had some problems with
+                                                women.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                I would have liked to understand how that started. I mean, the book
+                                                didn’t go into too much detail about why he felt that way.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                I agree with that. I think the author could have handled that part
+                                                better. I did enjoy the descriptions, though.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message new">
+                                                Oh yes, the writing was beautiful! That just made me more disappointed
+                                                in the character.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                            <div class="message message-personal new">
+                                                Well, this is just my opinion, but maybe the character would have been
+                                                easier to understand if the writing had been simpler. It seemed like the
+                                                author spent a lot of time on the descriptions, when he could have spent
+                                                more time on the character’s thoughts.
+                                                <div class="timestamp">15:13</div>
+                                                <div class="checkmark-sent-delivered">✓</div>
+                                                <div class="checkmark-read">✓</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-box">
+                                            <textarea class="message-input emojiPicker"
+                                                placeholder="Type message..."></textarea>
+                                            <div class="add-extent">
+                                                <i class="fas fa-plus animated-btn"></i>
+                                                <div class="options">
+                                                    <ul>
+                                                        <li><img src="../assets/svg/image.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/paperclip.svg" alt=""></li>
+                                                        <li><img src="../assets/svg/camera.svg" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="message-submit"><i data-feather="send"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="back-btn d-lg-none d-block">
+                                <i data-feather="x" class="icon-theme"></i>
+                            </div>
+                            <div class="user-image">
+                                <img src="../assets/images/user/12.jpg" class="img-fluid blur-up lazyload bg-img"
+                                    alt="">
+                            </div>
+                            <div class="user-name">
+                                <h5>Petey Cruiser</h5>
+                                <h6>london, united kingdom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus magnam
+                                    adipisci aspernatur.</p>
+                                <div class="social-btn">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#twitter"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="#">
+                                                <svg>
+                                                    <use xlink:href="../assets/svg/icons.svg#whatsapp"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user-gallery">
+                                <h5>media <a href="#" onclick="handleGenericClick(this)">see all</a></h5>
+                                <div class="gallery-section">
+                                    <div class="portfolio-section ratio_square">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/2.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/4.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="overlay">
+                                                        <div class="portfolio-image">
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModel">
+                                                                <img src="../assets/images/post/11.jpg" alt=""
+                                                                    class="img-fluid blur-up lazyload bg-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- messanger section end -->
+
+
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- popper js-->
+    <script src="../assets/js/popper.min.js"></script>
+
+    <!-- feather icon js-->
+    <script src="../assets/js/feather.min.js"></script>
+
+    <!-- emoji picker js-->
+    <script src="../assets/js/emojionearea.min.js"></script>
+
+    <!-- messanger js -->
+    <script src="../assets/js/jquery-migrate-1.4.1.min.js"></script>
+    <script
+        src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/messanger.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.js"></script>
+
+    <!-- lazyload js-->
+    <script src="../assets/js/lazysizes.min.js"></script>
+
+
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+
+    <script>
+        feather.replace();
+        $(".emojiPicker").emojioneArea({
+            inline: true,
+            placement: 'absright',
+            pickerPosition: "top",
+        });
+    </script>
+
+</body>
+
+</html>
